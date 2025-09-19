@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/Data/users.php';
+require_once __DIR__ . '/Utils/Validator.php';
 
 class User
 {
