@@ -16,6 +16,7 @@ class Validator
         }
     }
 
+    # Validação da Senha
     public function isStrongPassword(string $password): bool
     {
         if (empty($password)){
