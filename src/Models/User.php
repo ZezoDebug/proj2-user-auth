@@ -5,12 +5,12 @@ require_once __DIR__ . '/../Utils/Validator.php';
 
 class User
 {
+    private Validator $validator;
     private int $id;
     public string $name;
     public string $email;
     private string $password;
-    private Validator $validator;
-
+   
     public function __construct(int $id, string $name, string $email, string $password, Validator $validator) 
     {
         $this->id = $id;
