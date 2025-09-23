@@ -13,11 +13,11 @@ class User
    
     public function __construct(int $id, string $name, string $email, string $password, Validator $validator) 
     {
+        $this->validator = $validator;
         $this->id = $id;
         $this->name = $name;
         $this->setEmail($email);
         $this->setPassword($password);
-        $this->validator = $validator;
     }
 
     
