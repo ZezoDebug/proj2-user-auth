@@ -56,7 +56,7 @@ class UserManager
         }
         try {
             $user = new User(0, $name, $email, $password, $this->validator); 
-            $nextId = empty($this->users) ? 1 : max(array_column($this->users, 'id')) + 1; 
+            $nextId = empty($this->users) ? 1 : max(array_map(function($u) => $u->getId(), $this->users)) + 1;
             $user->setId($nextId);
             $this->users[] = $user;
             echo "Usuário cadastrado com sucesso.\n";
