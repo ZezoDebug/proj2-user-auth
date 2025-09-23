@@ -19,18 +19,12 @@ class Validator
     # Validação da Senha
     public function isStrongPassword(string $password): bool
     {
-        if (empty($password)){
+        if (empty($password) || strlen($password) < 8) {
             return false;
-        } elseif (strlen($password) < 8 ) {
-            return false;
-        } elseif (!preg_match('/[A-Z]/', $password)) {
-            return false;
-        } elseif (!preg_match('/[a-z]/', $password)) {
-            return false;
-        } elseif (!preg_match('/[0-9]/', $password)) {
-            return false;
-        } else {
-            return true;
         }
+        if (!preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password) || !preg_match('/[0-9]/', $password)) {
+            return false;
+        }
+        return true;
     }
 }           
