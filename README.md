@@ -16,16 +16,27 @@ Todos os dados são fixos em arrays PHP, sem necessidade de banco de dados.
 ## **Estrutura de Pastas**
 
 src/
+
 ├── Data/
+
 │ └── users.php # Array inicial de usuários
+
 ├── Models/
+
 │ └── User.php # Classe User
+
 ├── Services/
+
 │ └── UserManager.php # Classe UserManager
+
 ├── Utils/
+
 │ └── Validator.php # Validações de email e senha
+
 ├── public/
+
 │ └── index.php # Testes e execução
+
 └── README.md
 
 
